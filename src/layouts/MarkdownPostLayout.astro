@@ -1,5 +1,10 @@
 ---
+import type { Frontmatter } from '@_types/post';
 import BaseLayout from './BaseLayout.astro';
+
+type Props = {
+  frontmatter: Frontmatter;
+};
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
